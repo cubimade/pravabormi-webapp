@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": 111,
+      "image": "../images/signs/priority_stop.png",
+      "q": {
+        "uz_latin": "Ushbu belgi nimani bildiradi?",
+        "uz_cyrillic": "Ушбу белги нимани билдиради?",
+        "ru": "Что означает этот знак?"
+      },
+      "options": {
+        "uz_latin": ["To'xtamasdan harakatlanish taqiqlanadi", "Tezlikni kamaytirish", "Asosiy yo'l", "Piyodalar o'tish joyi"],
+        "uz_cyrillic": ["Тўхтамасдан ҳаракатланиш тақиқланади", "Тезликни камайтириш", "Асосий йўл", "Пиёдалар ўтиш жойи"],
+        "ru": ["Движение без остановки запрещено", "Снизить скорость", "Главная дорога", "Пешеходный переход"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "STOP belgisi oldida to'liq to'xtash, keyin ustunlikni baholab harakatlanish shart.",
+        "uz_cyrillic": "STOP белгиси олдида тўлиқ тўхташ, кейин устунликни баҳолаб ҳаракатланиш шарт.",
+        "ru": "Перед знаком STOP необходимо полностью остановиться, затем продолжить движение, уступив дорогу."
+      }
+    },
+    {
+      "id": 112,
+      "image": "../images/signs/priority_give_way.png",
+      "q": {
+        "uz_latin": "Ushbu belgi haydovchidan nimani talab qiladi?",
+        "uz_cyrillic": "Ушбу белги ҳайдовчидан нимани талаб қилади?",
+        "ru": "Что требует этот знак от водителя?"
+      },
+      "options": {
+        "uz_latin": ["Yo'l berish", "To'liq to'xtash", "Tezlikni oshirish", "Burilish taqiqlangan"],
+        "uz_cyrillic": ["Йўл бериш", "Тўлиқ тўхташ", "Тезликни ошириш", "Бурилиш тақиқланган"],
+        "ru": ["Уступить дорогу", "Полная остановка", "Увеличить скорость", "Поворот запрещён"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "\"Yo'l bering\" belgisi kesishayotgan yo'ldagi transport vositalariga yo'l berishni talab qiladi.",
+        "uz_cyrillic": "\"Йўл беринг\" белгиси кесишаётган йўлдаги транспорт воситаларига йўл беришни талаб қилади.",
+        "ru": "Знак \"Уступите дорогу\" требует уступить транспорту на пересекаемой дороге."
+      }
+    },
+    {
+      "id": 113,
+      "image": "../images/signs/priority_main_road.png",
+      "q": {
+        "uz_latin": "Sariq rombli ushbu belgi nimani anglatadi?",
+        "uz_cyrillic": "Сариқ ромбли ушбу белги нимани англатади?",
+        "ru": "Что означает этот знак с жёлтым ромбом?"
+      },
+      "options": {
+        "uz_latin": ["Asosiy yo'l", "Yo'l berish", "To'xtash taqiqlangan", "Yashash zonasi"],
+        "uz_cyrillic": ["Асосий йўл", "Йўл бериш", "Тўхташ тақиқланган", "Яшаш зонаси"],
+        "ru": ["Главная дорога", "Уступить дорогу", "Остановка запрещена", "Жилая зона"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "\"Asosiy yo'l\" belgisi shu yo'lda harakatlanuvchiga ustunlik berilishini bildiradi.",
+        "uz_cyrillic": "\"Асосий йўл\" белгиси шу йўлда ҳаракатланувчига устунлик берилишини билдиради.",
+        "ru": "Знак \"Главная дорога\" даёт преимущество движущимся по ней."
+      }
+    },
+    {
+      "id": 114,
+      "image": "../images/signs/prohibit_no_entry.png",
+      "q": {
+        "uz_latin": "Ushbu belgi qayerda o'rnatiladi?",
+        "uz_cyrillic": "Ушбу белги қаерда ўрнатилади?",
+        "ru": "Где устанавливается этот знак?"
+      },
+      "options": {
+        "uz_latin": ["Kirish taqiqlangan joyda", "Asosiy yo'lda", "Avtoturargohda", "Piyodalar zonasida"],
+        "uz_cyrillic": ["Кириш тақиқланган жойда", "Асосий йўлда", "Автотураргоҳда", "Пиёдалар зонасида"],
+        "ru": ["Где въезд запрещён", "На главной дороге", "На парковке", "В пешеходной зоне"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "\"Kirish taqiqlangan\" belgisi barcha transport vositalarining kirishini taqiqlaydi.",
+        "uz_cyrillic": "\"Кириш тақиқланган\" белгиси барча транспорт воситаларининг киришини тақиқлайди.",
+        "ru": "Знак \"Въезд запрещён\" запрещает въезд всех транспортных средств."
+      }
+    },
+    {
+      "id": 115,
+      "image": "../images/signs/prohibit_speed_40.png",
+      "q": {
+        "uz_latin": "Ushbu belgi ta'sir doirasida ruxsat etilgan eng yuqori tezlik qancha?",
+        "uz_cyrillic": "Ушбу белги таъсир доирасида рухсат этилган энг юқори тезлик қанча?",
+        "ru": "Какова максимальная разрешённая скорость в зоне действия этого знака?"
+      },
+      "options": {
+        "uz_latin": ["40 km/soat", "40 m masofa", "4-toifa yo'l", "40 daqiqa"],
+        "uz_cyrillic": ["40 км/соат", "40 м масофа", "4-тоифа йўл", "40 дақиқа"],
+        "ru": ["40 км/ч", "40 м дистанция", "Дорога 4 категории", "40 минут"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "Belgi tezlikni 40 km/soatdan oshirmaslikni talab qiladi.",
+        "uz_cyrillic": "Белги тезликни 40 км/соатдан оширмасликни талаб қилади.",
+        "ru": "Знак требует не превышать скорость 40 км/ч."
+      }
+    },
+    {
+      "id": 116,
+      "image": "../images/signs/mandatory_straight.png",
+      "q": {
+        "uz_latin": "Ko'k doiradagi yuqoriga strelka nimani buyuradi?",
+        "uz_cyrillic": "Кўк доирадаги юқорига стрелка нимани буюради?",
+        "ru": "Что предписывает синий круг со стрелкой вверх?"
+      },
+      "options": {
+        "uz_latin": ["Faqat to'g'riga harakat", "To'g'riga taqiqlangan", "O'ngga burilish", "Orqaga qaytish"],
+        "uz_cyrillic": ["Фақат тўғрига ҳаракат", "Тўғрига тақиқланган", "Ўнгга бурилиш", "Орқага қайтиш"],
+        "ru": ["Движение только прямо", "Прямо запрещено", "Поворот направо", "Разворот"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "Ko'k majburiy belgi faqat ko'rsatilgan yo'nalishda harakatlanishni buyuradi.",
+        "uz_cyrillic": "Кўк мажбурий белги фақат кўрсатилган йўналишда ҳаракатланишни буюради.",
+        "ru": "Синий предписывающий знак указывает двигаться только в указанном направлении."
+      }
+    },
+    {
+      "id": 117,
+      "image": "../images/signs/warn_traffic_light.png",
+      "q": {
+        "uz_latin": "Ushbu ogohlantiruvchi belgi nimadan ogohlantiradi?",
+        "uz_cyrillic": "Ушбу огоҳлантирувчи белги нимадан огоҳлантиради?",
+        "ru": "О чём предупреждает этот знак?"
+      },
+      "options": {
+        "uz_latin": ["Svetofor bilan tartibga solinadigan chorraha", "Avtoturargoh", "Yonilg'i quyish shoxobchasi", "Tibbiyot punkti"],
+        "uz_cyrillic": ["Светофор билан тартибга солинадиган чорраҳа", "Автотураргоҳ", "Ёнилғи қуйиш шохобчаси", "Тиббиёт пункти"],
+        "ru": ["Перекрёсток со светофором", "Парковка", "АЗС", "Медпункт"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "Belgi oldinda svetofor bilan tartibga solinadigan joy borligidan ogohlantiradi.",
+        "uz_cyrillic": "Белги олдинда светофор билан тартибга солинадиган жой борлигидан огоҳлантиради.",
+        "ru": "Знак предупреждает о регулируемом светофором участке впереди."
+      }
+    },
+    {
+      "id": 118,
+      "image": "../images/signs/warn_children.png",
+      "q": {
+        "uz_latin": "Ushbu belgi qaysi joylarda o'rnatiladi?",
+        "uz_cyrillic": "Ушбу белги қайси жойларда ўрнатилади?",
+        "ru": "В каких местах устанавливается этот знак?"
+      },
+      "options": {
+        "uz_latin": ["Maktab va bolalar muassasalari yaqinida", "Kasalxonalar oldida", "Sanoat zonasida", "Avtomagistralda"],
+        "uz_cyrillic": ["Мактаб ва болалар муассасалари яқинида", "Касалхоналар олдида", "Саноат зонасида", "Автомагистралда"],
+        "ru": ["Возле школ и детских учреждений", "Перед больницами", "В промзоне", "На автомагистрали"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "\"Bolalar\" belgisi bolalar ko'p bo'lgan hududda ehtiyotkorlikni talab qiladi.",
+        "uz_cyrillic": "\"Болалар\" белгиси болалар кўп бўлган ҳудудда эҳтиёткорликни талаб қилади.",
+        "ru": "Знак \"Дети\" требует особой осторожности в местах скопления детей."
+      }
+    },
+    {
+      "id": 119,
+      "image": "../images/signs/info_pedestrian.png",
+      "q": {
+        "uz_latin": "Ushbu belgi nimani ko'rsatadi?",
+        "uz_cyrillic": "Ушбу белги нимани кўрсатади?",
+        "ru": "Что обозначает этот знак?"
+      },
+      "options": {
+        "uz_latin": ["Piyodalar o'tish joyi", "Piyodalar harakati taqiqlangan", "Bolalar maydonchasi", "Avtobus bekati"],
+        "uz_cyrillic": ["Пиёдалар ўтиш жойи", "Пиёдалар ҳаракати тақиқланган", "Болалар майдончаси", "Автобус бекати"],
+        "ru": ["Пешеходный переход", "Движение пешеходов запрещено", "Детская площадка", "Автобусная остановка"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "Ko'k kvadratdagi belgi piyodalar o'tish joyini ko'rsatadi.",
+        "uz_cyrillic": "Кўк квадратдаги белги пиёдалар ўтиш жойини кўрсатади.",
+        "ru": "Знак на синем квадрате указывает место пешеходного перехода."
+      }
+    },
+    {
+      "id": 120,
+      "image": "../images/signs/prohibit_no_stopping.png",
+      "q": {
+        "uz_latin": "Qizil chiziqli ko'k doira nimani taqiqlaydi?",
+        "uz_cyrillic": "Қизил чизиқли кўк доира нимани тақиқлайди?",
+        "ru": "Что запрещает синий круг с красной полосой?"
+      },
+      "options": {
+        "uz_latin": ["To'xtab turish", "Faqat to'xtash", "Burilish", "Signal berish"],
+        "uz_cyrillic": ["Тўхтаб туриш", "Фақат тўхташ", "Бурилиш", "Сигнал бериш"],
+        "ru": ["Стоянку", "Только остановку", "Поворот", "Подачу сигнала"]
+      },
+      "correct": 0,
+      "explanation": {
+        "uz_latin": "Belgi ta'sir doirasida transport vositasini to'xtatib qo'yish (stoyanka) taqiqlanadi.",
+        "uz_cyrillic": "Белги таъсир доирасида транспорт воситасини тўхтатиб қўйиш (стоянка) тақиқланади.",
+        "ru": "В зоне действия знака запрещена стоянка транспортного средства."
+      }
+    }
+  ]
+}
