@@ -12,7 +12,6 @@ let timerInterval = null;
 
 const $ = (id) => document.getElementById(id);
 
-// --- Savollarni yuklash ---
 fetch("questions.json")
   .then(r => r.json())
   .then(data => {
@@ -21,10 +20,10 @@ fetch("questions.json")
     $("score-max").textContent = QUESTIONS.length;
   })
   .catch(() => {
-    $("subtitle") && ($("subtitle").textContent = "Savollarni yuklashda xatolik.");
+    const s = document.querySelector(".subtitle");
+    if (s) s.textContent = "Savollarni yuklashda xatolik.";
   });
 
-// --- Til tanlash ---
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
@@ -33,13 +32,11 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
   });
 });
 
-// --- Ekran almashtirish ---
 function showScreen(name) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
   $("screen-" + name).classList.add("active");
 }
 
-// --- Test boshlash ---
 $("btn-start").addEventListener("click", () => {
   idx = 0; score = 0;
   startTime = Date.now();
@@ -48,7 +45,6 @@ $("btn-start").addEventListener("click", () => {
   renderQuestion();
 });
 
-// --- Timer ---
 function startTimer() {
   clearInterval(timerInterval);
   timerInterval = setInterval(() => {
@@ -59,7 +55,6 @@ function startTimer() {
   }, 500);
 }
 
-// --- Savolni chizish ---
 function renderQuestion() {
   answered = false;
   const q = QUESTIONS[idx];
@@ -67,6 +62,7 @@ function renderQuestion() {
   $("progress-text").textContent = `${idx + 1} / ${QUESTIONS.length}`;
   $("progress-fill").style.width = `${(idx / QUESTIONS.length) * 100}%`;
 
+  $("sign-img").style.opacity = 1;
   $("sign-img").src = q.image;
   $("sign-img").onerror = () => { $("sign-img").style.opacity = .3; };
   $("question-text").textContent = q.q[lang];
@@ -84,41 +80,43 @@ function renderQuestion() {
   $("feedback").hidden = true;
 }
 
-// --- Javob tanlash ---
 function choose(chosen, btnEl) {
   if (answered) return;
   answered = true;
   const q = QUESTIONS[idx];
   const correct = q.correct;
 
+  if (tg?.HapticFeedback) {
+    tg.HapticFeedback.notificationOccurred(chosen === correct ? "success" : "error");
+  }
+
   document.querySelectorAll(".option").forEach((el, i) => {
     el.classList.add("disabled");
     if (i === correct) el.classList.add("correct");
-    if (i === chosen && chosen !== correct) el.classList.add("wrong");
+    else if (i === chosen) el.classList.add("wrong");
+    else el.classList.add("dimmed");
   });
 
+  const fr = $("feedback-result");
   if (chosen === correct) {
     score++;
-    $("feedback-result").textContent = "✅ To'g'ri!";
+    fr.textContent = "To'g'ri!";
+    fr.className = "feedback-result ok";
   } else {
-    $("feedback-result").textContent = "❌ Noto'g'ri";
+    fr.textContent = "Noto'g'ri";
+    fr.className = "feedback-result no";
   }
   $("feedback-explain").textContent = q.explanation[lang];
   $("feedback").hidden = false;
   $("progress-fill").style.width = `${((idx + 1) / QUESTIONS.length) * 100}%`;
 }
 
-// --- Keyingi savol ---
 $("btn-next").addEventListener("click", () => {
   idx++;
-  if (idx < QUESTIONS.length) {
-    renderQuestion();
-  } else {
-    finish();
-  }
+  if (idx < QUESTIONS.length) renderQuestion();
+  else finish();
 });
 
-// --- Natija ---
 function finish() {
   clearInterval(timerInterval);
   const total = QUESTIONS.length;
@@ -138,7 +136,6 @@ function finish() {
   showScreen("result");
 }
 
-// --- Qaytadan ---
 $("btn-retry").addEventListener("click", () => {
   idx = 0; score = 0;
   startTime = Date.now();
@@ -147,7 +144,6 @@ $("btn-retry").addEventListener("click", () => {
   renderQuestion();
 });
 
-// --- Natijani botga yuborish ---
 $("btn-send").addEventListener("click", () => {
   const payload = JSON.stringify({
     type: "quiz_result",
@@ -156,10 +152,6 @@ $("btn-send").addEventListener("click", () => {
     total: QUESTIONS.length,
     seconds: Math.floor((Date.now() - startTime) / 1000)
   });
-  if (tg) {
-    tg.sendData(payload);
-    tg.close();
-  } else {
-    alert("Bu funksiya faqat Telegram ichida ishlaydi.\n\n" + payload);
-  }
+  if (tg) { tg.sendData(payload); tg.close(); }
+  else { alert("Bu funksiya faqat Telegram ichida ishlaydi.\n\n" + payload); }
 });
